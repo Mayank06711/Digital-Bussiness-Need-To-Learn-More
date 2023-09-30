@@ -1,0 +1,122 @@
+.wwd-wrapper{
+    position: relative;
+}
+.w-container{
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-items: center;
+}
+.w-head{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    width: 75%;
+}
+.w-blocks{
+    width: 100%;
+    display: flex;
+    gap:2rem;    
+    /* gap is for block one and block sec  */
+}
+.w-block{
+    flex: 1;
+    /* both of blkck will have width 50%  due do flex 1*/
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    padding: 2rem;
+    justify-content: center;
+    text-align: center;
+    box-shadow: var(--shadow);
+    border-radius: 2rem;
+}
+.bk-features{
+    margin-top: 1rem;
+display: flex;
+
+gap: 1rem;
+}
+.bk-feature{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 1rem;
+    border: 1px solid hsl(0, 0%, 59%, 0.17);
+    border-radius: 1rem;
+    padding: 1rem;
+    color: var(--title-color);
+    font-size: 1.1rem;
+    line-height: 1.5rem;
+    font-weight: 500;
+    height: fit-content;
+}
+.w-block:nth-child(1)>.bk-features >:nth-child(2){
+margin-top: 3rem;
+}
+.w-block:nth-of-type(2)>.bk-features >:nth-child(1),.w-block:nth-of-type(2)>.bk-features >:nth-child(3){
+    margin-top: 2rem;
+    /* this eill shift our this section blue seed box num 2 from left in upward dir by 2 re, */
+}
+.wb-support{
+    display: flex;
+    padding: 2rem;
+    box-shadow: var(--shadow);
+    border-radius: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2.5rem;
+    background: white;
+}
+.wb-support >div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+
+}
+.wb-support>:nth-child(1)
+{
+    flex: 1;
+}
+.wb-support>:nth-child(2)
+{
+    flex: 1.6;
+    /* 2nd child will occupy more space than 1st */
+}
+
+@media (max-width:990px)
+{
+    .w-blocks{
+        flex-direction: column;
+    }
+}
+
+@media (max-width:768px)
+{
+    .wb-support{
+        flex-direction: column;
+    }
+}
+
+@media (max-width:576px)
+{
+    .w-block{
+        width: 80%;
+        margin: auto;
+    }
+    .bk-features{
+        flex-direction: column;
+    }
+    .bk-feature{
+        margin-top: 0rem!important;
+    }
+}

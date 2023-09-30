@@ -1,0 +1,126 @@
+.n-wrapper {
+  background-color: var(--primary-color);
+  width: 100%;
+  position: relative;
+  z-index: 999;
+  /* z index 999 so that our navbar remain on top od ==f everythin */
+}
+.sticky{
+  position: fixed;
+  box-shadow: 10px 12px 48px rgba(181 , 187 , 203 ,206);
+  background: white;
+  top: 0;
+}
+.n-container {
+  padding: 1.5rem 1rem;
+  /* 1.5rem top and bottom and 1rem from left and right */
+  color: white;
+  font-size: 1rem;
+  display: flex;
+  /* to position our ele oon sides of n-conatainer */
+  justify-content: space-between;
+  /* space bet this prop makes our item to xtreme side of conat8ner */
+  font-weight: 500;
+}
+.sticky .n-container {
+  /* i.e when our sticky is inside n-container what we will be doing */
+  color: var(--title-color);
+  padding: 1rem;
+}
+.n-logo {
+  font-weight: bold;
+  cursor: pointer;
+}
+.n-right {
+  text-transform: uppercase;
+  /* all letter will be uppercase */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  font-size: 0.9rem;
+}
+.n-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+}
+/* by doing this we are targtting all ou span */
+.n-menu span {
+  cursor: pointer;
+}
+.fund-button {
+  columns: var(--dark-bg);
+  background-color: var(--third-color);
+  padding: 1rem 1.6rem;
+  font-size: 1rem;
+  text-transform: capitalize;
+  /* capitalize will make first letter of w=each word capital */
+  border-radius: 999px;
+}
+.nm-container {
+  display: none;
+}
+@media (max-width: 1200px) {
+  .n-container {
+    display: none;
+  }
+  .nm-container {
+    display: block;
+  }
+  /* it means for screen with max width less than 1200px n-con will not be visible abut nmcon will show */
+  .nm-container {
+    display: block;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    position: relative;
+    background-color: var(--primary-color);
+  }
+  .nm-container > :nth-child(1) {
+    font-weight: bold;
+  }
+  .nm-menu {
+    position: fixed;
+    top: 3.9rem;
+    /* bcz nm-conatiner will have height of 4rem that why we kept our menu below 4rem */
+    padding: 3rem 2rem;
+    box-sizing: border-box;
+    left: 0;
+    display: flex;
+    background: var(--primary-color);
+    flex-direction: column;
+    /* flex-dir colm so shat content show in column not in row */
+    transform: translate(-150%);
+    /* -150% means it will not be shown in normal case as it is in -150% in x */
+    transition: all 300ms ease-in-out;
+    /* this is for menu button which comes from right and go back again */
+    width: 100%;
+    font-size: 1.2rem;
+    z-index: 99;
+    height: calc(100vh -3.9rem);
+    /* here we have used calc() func to cal its height and its height would be 100% of view height from which 4rem will be subtracted bcz it would be taken by nm-con at the top*/
+  }
+  .nm-menu a {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+  .m-funded-button{
+    width: 100%;
+    background-color: var(--third-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    padding: 1rem 0rem;
+    border-radius: 999px;
+    /* border-radius 999px will make its left and ha;f border complete circle */
+    color: var(--dark-bg);
+    /* color means text color */
+    text-transform: uppercase;
+  }
+}

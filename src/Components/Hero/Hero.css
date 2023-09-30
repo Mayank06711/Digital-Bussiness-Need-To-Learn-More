@@ -1,0 +1,130 @@
+.h-wrapper {
+  background-color: var(--primary-color);
+  height: 120vh;
+  /* due to this 120vh we will get scroll bar due to this in  */
+  overflow: hidden;
+}
+.h-wrapper .container {
+  padding-top: 8rem;
+}
+.h-arrow {
+  position: absolute;
+  /* if position is set to be relative it will cover entire conatiner pushing other ele to go down since it will be relative to our main conatiner  */
+  top: 5rem;
+  width: 100%;
+  max-width: 60rem;
+  z-index: 0;
+  /* so that it goes behind all other elements of our screen */
+}
+.h-container {
+  display: flex;
+  height: 80vh;
+  align-items: center;
+  justify-content: space-around;
+  /* bcz we want some gap around left and right as well and in between as well */
+  position: relative;
+}
+/* left side styled */
+.h-left {
+  flex: 1;
+  /* it will take only 50% of our actual length of h-container */
+  /* why 50% bcz right has also flex 1 */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  /* bcz we want both row in column dir */
+  gap: 2rem;
+  align-items: center;
+  padding-top: 5rem;
+}
+.image-row {
+  display: flex;
+  gap: 2rem;
+}
+.person-box {
+  height: 15rem;
+  width: 6rem;
+  border-radius: 999px;
+  overflow: hidden;
+}
+.person-box-bg {
+  border-radius: 999px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.person-box-bg > img {
+  width: 100%;
+  /* making size of our image correct  */
+  object-fit: cover;
+  scale: 2;
+  /* we are scaling there size to 2% of their size */
+  margin-top: 4rem;
+}
+.image-row > :nth-child(2) {
+  transform: translateY(-4rem);
+  /* we are moving our 2nd images so that  they go up in y 4rem which is same as padding given to them */
+}
+
+/* right side styled */
+.h-right {
+  flex: 1.25;
+  /* 1.25 otherwise digital bussiness will go into 2rows */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.h-title {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  color: var(--third-color);
+  font-size: 4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.h-title > :nth-child(3) {
+  /*  3rd child has a color of white */
+  color: white;
+}
+.h-des {
+  color: white;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+
+/* making it responsive */
+@media (max-width :1024px)
+/* we are specifying *only* one media query that is max-width */
+/* max-width means when device reaches this width then execute this css  */
+{
+.h-wrapper{
+  height: max-content;
+}
+.h-wrapper .container{
+  padding-top: 5rem;
+}
+.h-container{
+  height: auto;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  padding-bottom: 2.9rem;
+}
+.h-arrow{
+  display: none;
+}
+.h-right{
+  flex: 1;
+  align-items: center;
+}
+.h-title{
+  align-items: center;
+  font-size: 2.2rem;
+}
+.h-des{
+ font-size: 1.2rem;
+ width: 80%;
+ text-align: center;
+}
+}

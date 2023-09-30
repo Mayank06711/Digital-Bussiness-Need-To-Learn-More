@@ -1,0 +1,27 @@
+.bv-container .container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+    /* if its hidden then part of video which oes up into hero section would'nt be visible */
+}
+.b-video{
+    width: 95%;
+    border-radius: 4rem;
+    margin-top: -10rem;
+    /*  so that it goes up into hero section as well */
+    z-index: 1;
+    /* show that it remain on top */
+}
+@media (max-width :1024px) {
+    .b-video{
+        margin-top: 1.1rem;
+
+    }
+}
+@media (max-width :1024px) {
+    .b-video{
+        border-radius: 3.2rem;
+
+    }
+}
