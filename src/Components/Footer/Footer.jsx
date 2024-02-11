@@ -18,7 +18,7 @@ const Footer = () => {
           </div>
           <hr/>
           <span className="text">
-            Made by mayank  using youtube tutorials of ZKC ❤️❤️ 
+             ❤️❤️❤️ 
           </span>
         </div>
       </div>
