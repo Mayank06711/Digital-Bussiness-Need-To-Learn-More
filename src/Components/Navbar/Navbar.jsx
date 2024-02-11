@@ -33,7 +33,7 @@ const Navbar = () => {
         <div className="n-container">
           {/* left side */}
           <div className="n-logo">
-            <span>Mayank soni</span>
+            <span>NEXT BUSINESS</span>
           </div>
           {/* right side */}
           <div className="n-right">
@@ -60,7 +60,7 @@ const Navbar = () => {
       {/* mob/tab version */}
       <div className="nm-container">
         {/* logo */}
-        <span>mayank wil deploy thi</span>
+        <span>NEXT BUSINESS</span>
         {/* menu icon */}
         {/* using react icon lib name BiMenu...ght */}
         {!mobileMenuOpened ? (
