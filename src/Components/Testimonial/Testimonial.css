@@ -42,6 +42,7 @@
     flex-direction: column;
     gap: 2rem;
 }
+
 .c-content span{
     font-size: 1rem;
     line-height: 1.5rem;
@@ -85,5 +86,8 @@
         transform: translateY(-30px);
         /* translateY will move upward while coming to view */
         box-shadow: var(--shadow);
+    }
+    .c-content img{
+        display:none;
     }
 }
